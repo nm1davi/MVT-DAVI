@@ -1,17 +1,19 @@
 from django.http import HttpResponse
-from django.template import Template, context
+from django.template import Template, Context, loader
 
 def inicio(request):
     return HttpResponse("Hola soy la vista de Django")
 
 def mi_template(request):
     
-    archivo = open(r"C:\Users\USUARIO\Desktop\TrabajoMTV\templates\prueba.html", "r")
+    # archivo = open(r"C:\Users\USUARIO\Desktop\TrabajoMTV\templates\prueba.html", "r")
     
-    template1 = Template(archivo.read())
+    template1 = loader.get_template("prueba.html")
     
-    contexto1 = context()
+    nombre = "Momia"
+    # template1 = Template(archivo.read())
+    # contexto1 = Context()
+    apellido = "Blanca"
+    render1 = template1.render({"nombre" : nombre, "apellido" : apellido})
     
-    render1 = template1.render(contexto1)
-    
-    return HttpResponse(render1)
+    return HttpResponse (render1)
