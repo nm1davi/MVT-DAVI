@@ -1,8 +1,9 @@
-from .views import inicio, mi_template, listado_familia
+from .views import inicio, listado_familia, mi_template
 from django.urls import path
 urlpatterns = [
     path('', inicio),
     path('mi-template/', mi_template),
-    path('lista-familia/', listado_familia),
+    path('listado-familia', listado_familia),
+
 
 ]
