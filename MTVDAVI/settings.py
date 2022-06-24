@@ -55,7 +55,7 @@ ROOT_URLCONF = 'MTVDAVI.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r"C:\Users\USUARIO\Desktop\TrabajoMTV\templates"],
+        'DIRS': [r"C:\Users\USUARIO\Desktop\MVT-DAVI\templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
